@@ -1,6 +1,7 @@
-/**
- * Reset some basic elements
- */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap');
+    /**
+     * Reset some basic elements
+     */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -95,6 +96,9 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
+}
+h2 {
+  font-family: 'Kaushan Script', cursive;
 }
 
 
@@ -217,4 +221,22 @@ table {
   td {
     border: 1px solid $grey-color-light;
   }
+}
+
+/**
+ * Description Lists
+ */
+dl {
+  display: block;
+}
+dt {
+  float: left;
+  clear: left;
+  margin-right: 10px;
+  &:after {
+    content: ':'
+  }
+}
+dd {
+  float: left;
 }

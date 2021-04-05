@@ -2,7 +2,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-family: Poppins, sans-serif;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -25,8 +25,6 @@ $table-text-align: left !default;
 // Width of the content area
 $content-width:    50em !default;
 
-// Note - website is designed "mobile first"
-// As such, all defaults rules apply to mobile, and 
 $on-palm:          40em !default;
 $on-laptop:        50em !default;
 
@@ -49,7 +47,6 @@ $on-laptop:        50em !default;
 
 // Import partials.
 @import
-  "site/home.scss",
   "site/base",
   "site/layout"
 ;

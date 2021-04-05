@@ -7,20 +7,29 @@
   left: 0;
   right: 0;
   color: $white-color;
-
+  padding: 0 calc((100% - 50em)/2);
+  
   .site-title {
     color: $white-color;
     @include relative-font-size(1.8);
-    padding-left: 2em;
     font-weight: bold;
     
     &:hover, &:visited {
       color: $white-color;
     } 
+    
+    &::before {
+      content: "";
+      background: url("images/pca.png") no-repeat center;
+      background-size: contain;
+      width: 1em;
+      display: inline-block;
+      height: 40px;
+      vertical-align: middle;
+    }
   }
   
   nav {
-  
     float: right;
     
     li {
@@ -37,23 +46,51 @@
       text-decoration: none;
     }
   }
-  
 }
 
 body {
   background: #ddd;
 }
 
-h2{
+// The picture header
+main header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/BHCS4.jpg") center;
+  height: 20em;
+  padding-top: 7em;
+  box-sizing: border-box;
+  text-align: center;
+  color: $white-color;
+
+  h1 {
+    font-size: 4em;
+    font-weight: bold;
+
+    .line-1 {
+
+    }
+
+    .line-2 {
+      font-size: 80%;
+      display: block;
+      position: relative;
+      top: -0.5em;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+h2 {
   text-align: center;
 }
 
 article {
   padding: 1em calc((100% - 50em)/2);
   background: $white-color;
+  text-align: center;
 
-  &:nth-of-type(even) {
-    background: #fff;
+  &:nth-of-type(odd) {
+    background: #dddde3;
     box-shadow: 0 0 15px -10px black;
     position: relative;
   }

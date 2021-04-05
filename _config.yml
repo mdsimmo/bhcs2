@@ -27,14 +27,13 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/bhpc" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-email: your-email@example.com
-phone: 0412345678
+email: info@bhpc.net.au
+phone: 0437 592 411
 github_repo: "mdsimmo/bhpc" 
 
 header_pages:
   - about.md
   - contact.md
-  - facebook.md
 
 # Build settings
 plugins:
