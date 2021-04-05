@@ -1,0 +1,97 @@
+/**
+ * Site header
+ */
+.site-header {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  color: $white-color;
+
+  .site-title {
+    color: $white-color;
+    @include relative-font-size(1.8);
+    padding-left: 2em;
+    font-weight: bold;
+    
+    &:hover, &:visited {
+      color: $white-color;
+    } 
+  }
+  
+  nav {
+  
+    float: right;
+    
+    li {
+      display: inline-block;
+      margin: 0.5em 1em;
+    }
+    
+    a, a:visited, a:hover {
+      color: $white-color;
+    }
+    
+    a:hover {
+      text-shadow: -0.06ex 0 $white-color, 0.06ex 0 $white-color;
+      text-decoration: none;
+    }
+  }
+  
+}
+
+body {
+  background: #ddd;
+}
+
+h2{
+  text-align: center;
+}
+
+article {
+  padding: 1em calc((100% - 50em)/2);
+  background: $white-color;
+
+  &:nth-of-type(even) {
+    background: #fff;
+    box-shadow: 0 0 15px -10px black;
+    position: relative;
+  }
+}
+
+.multi-box {
+  
+  text-align: center;
+  
+  section {
+    display: inline-block;
+    max-width: 15em;
+    margin: 1em 2em;
+    vertical-align: top;
+  }
+}
+
+footer {
+  background: #333;
+  padding: 1em 2em;
+  color: $white-color;
+  box-shadow: 0 0 15px -5px black;
+  position: relative;
+  
+  .contacts {
+    text-align: left;
+  }
+  
+  .phone::before {
+    content: url("/assets/images/phone.svg");
+    padding-right: 1em;
+    opacity: 0.5;
+  }
+
+  .email::before {
+    content: url("/assets/images/email.svg");
+    padding-right: 1em;
+    opacity: 0.5;
+  }
+  
+}

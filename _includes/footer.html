@@ -1,0 +1,21 @@
+<footer class="multi-box">
+    <section>
+        <address>
+            10 Wattle Valley Road<br>
+            Belgrave Heights, Vic 3160
+        </address>
+    </section>
+    
+    <section class="contacts">
+        <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <span class="phone">{{ site.phone }}</span>
+    </section>
+    <section>
+        <a href="https://github.com/{{ site.github_repo | escape }}">
+            <svg class="svg-icon">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
+            </svg>
+            <span>Fork me on GitHub</span>
+        </a>
+    </section>
+</footer>
