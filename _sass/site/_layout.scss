@@ -83,13 +83,13 @@ footer {
   }
   
   .phone::before {
-    content: url("/assets/images/phone.svg");
+    content: url("images/phone.svg");
     padding-right: 1em;
     opacity: 0.5;
   }
 
   .email::before {
-    content: url("/assets/images/email.svg");
+    content: url("images/email.svg");
     padding-right: 1em;
     opacity: 0.5;
   }
