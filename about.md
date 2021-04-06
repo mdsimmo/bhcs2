@@ -4,26 +4,32 @@ title: About Us
 permalink: /about/
 ---
 
+> He is the one we proclaim, admonishing and teaching everyone with all wisdom, 
+> so that we may present everyone fully mature in Christ.
+>
+> <cite>Colossians 1:28 NIV</cite>
 
-<h2>Our Beliefs</h2>
-<h3>Faith through Salvation</h3>
-<p>
-    Some profound words. Yes. Most profound. Mind boggling, just so mind boggling.
-    Wow, I'm glad I wrote this section. Yep, I sure hope I don't' forget to change
-    this before releasing the site...
-</p>
+## Our Beliefs
+This should be a more detailed description of our beliefs.
 
-<h3>Another important point</h3>
-<p>Yep, I reckon this is just as good as the previous point. Now for some lorum
-    lipsium. Lips of Lorrals says loruoul lipsium lots of lorousl.</p>
+Probably a good idea to link to official sites, eg. Presby Aust, West Minister, etc.
 
-<h3>All good things come in threes</h3>
-<p>Except cookies - they come in plates.</p>
+### Faith through Salvation
+Some profound words. Yes. Most profound. Mind boggling, just so mind boggling.
+Wow, I'm glad I wrote this section. Yep, I sure hope I don't forget to change
+this before releasing the site...
 
-<h2>The Minister</h2>
+### Another important point
+
+Yep, I reckon this is just as good as the previous point. Now for some lorum
+lipsium. Lips of Lorrals says loruoul lipsium lots of lorousl.</p>
+
+### All good things come in threes
+
+Except cookies - they come in plates.
+
+## The Minister
 
 Mark Tonkin.
 
 Insert Bio here.
-
-
