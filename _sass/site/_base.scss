@@ -138,41 +138,45 @@ a {
  */
 blockquote {
   color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
+  background:
+    linear-gradient(to right, $brand-color 4px, transparent 4px) 0% 0%,
+    linear-gradient(to bottom, $brand-color 4px, transparent 4px) 0% 0%,
+    linear-gradient(to left, $brand-color 4px, transparent 4px) 100% 100%,
+    linear-gradient(to top, $brand-color 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;  
+  padding: $spacing-unit $spacing-unit 1px;
   @include relative-font-size(1.125);
-  letter-spacing: -1px;
   font-style: italic;
-  clear-after: both;
-
-  > :last-child {
-    margin-bottom: 0;
-  }
+  position: relative;
   
   cite {
-    float: right;
-    
-    &::after {
-      clear: both;
-      display: block;
-    }
+    display: block;
+    text-align: right;
+    color: darken($brand-color, 25%);
   }
 
+  /* Quote mark */
   &::before {
     content: "“";
-    float: left;
+    left: 0px;
+    bottom: 0px;
   }
-  
   &::after {
     content: "”";
-    float: right;
+    right: 0px;
+    top: 0px;
   }
-  
-  &::before, &::after {
-    font-size: 300%;
+  &::after, &::before {
+    font-family: Arial,sans-serif;
+    font-size:350%;
+    position: absolute;
+    text-align: center;
+    color: $brand-color;
+    height: 1em;
   }
-}
 
+}
 
 
 /**

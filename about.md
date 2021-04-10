@@ -30,6 +30,8 @@ Except cookies - they come in plates.
 
 ## The Minister
 
+<img class="bio-img" alt="Mark Tonkin" src="{{ "assets/images/marktonkin.png" | relative_url }}"/>
+
 Mark Tonkin.
 
 Insert Bio here.
