@@ -141,14 +141,52 @@ article {
   text-align: center;
   padding-left: 0;
   padding-right: 0;
+  position: relative;
+  isolation: isolate;
+  background: #fff;
+  mix-blend-mode: multiply;
+  
+  &::before {
+    background: #888;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    mix-blend-mode: color-dodge;
+    z-index: -5;
+  }  
   
   section {
     display: inline-block;
     max-width: 15em;
-    margin: 1em 2em;
+    padding: 1em;
     vertical-align: top;
+    position: relative;
+
+    &::before, &::after { 
+      position: absolute; 
+      top: 0; 
+      bottom: 0; 
+      background: #888; 
+      content: "";
+      display: block;
+      width: 40px;
+      mix-blend-mode: multiply;
+      z-index: -10;
+    }
+    &::before {
+      left:-3px;
+    }
+    &::after {
+      right: -3px;
+    }
   }
 }
+
+
+
 
 footer {
   background: #333;
