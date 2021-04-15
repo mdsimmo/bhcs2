@@ -2,6 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
+banner_img: garden
 ---
 
 <p>Church service is held in the undercroft of the School; enter the main gates into the carpark, and follow the signs</p>

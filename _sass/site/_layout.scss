@@ -73,13 +73,21 @@ body {
 
 // The picture header
 main header {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/BHCS4_2.jpg") center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
   background-size: cover;
   height: 8em;
   padding-top: 2em;
   box-sizing: border-box;
   text-align: center;
   color: $white-color;
+
+  &.garden {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/garden_2.jpg") center;
+  }
+
+  &.classroom {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/BHCS4_2.jpg") center;
+  }
 
   h1 {
     font-size: 2em;

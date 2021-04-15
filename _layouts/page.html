@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<header class=".page-header">
+<header class=".page-header {{ page.banner_img | default: "classroom" }}">
   <h1>{{ page.title | escape }}</h1>
 </header>
 
