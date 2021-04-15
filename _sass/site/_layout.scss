@@ -159,8 +159,9 @@ article {
     vertical-align: top;
     border-left: 1px solid rgba(128, 128, 128, 0.1);
     border-right: 1px solid rgba(128, 128, 128, 0.1);
-    flex: max-content;
+    flex: 1;
     text-align: center;
+    min-width: 13em;
     
     & > * {
       max-width: 15em;
