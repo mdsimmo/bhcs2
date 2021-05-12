@@ -4,67 +4,114 @@
 .site-header {
   background: #333;
   color: $white-color;
-  padding: 0 calc((100% - 50em)/2);
   text-align: center;
   
-  @include larger-than($on-palm) {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    left: 0;
-    right: 0;
-    text-align: left;
+  
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  left: 0;
+  right: 0;
+  text-align: left;
+  z-index: 100;
+  
+  @include smaller-than($on-palm) {
+    bottom: 0;
   }
   
   .site-title {
-    color: $white-color;
-    @include relative-font-size(1.3);
-    font-weight: bold;
-
+    @include smaller-than($on-laptop) {
+      a {
+        display: none;
+      }
+    }
+    
     @include larger-than($on-palm) {
       @include relative-font-size(1.8);
       margin-left: 1em;
-    }
-    
-    &:hover, &:visited {
       color: $white-color;
-    }
+      @include relative-font-size(1.3);
+      font-weight: bold;
+      max-width: none;
+      
+      a {
+        &:hover, &:visited {
+          color: $white-color;
+        }
 
-    &::before {
-      content: "";
-      background: url("images/pca.png") no-repeat center;
-      background-size: contain;
-      width: 1em;
-      display: inline-block;
-      height: 40px;
-      margin-right: 5px;
-      vertical-align: middle;
+        &::before {
+          content: "";
+          background: url("images/pca.png") no-repeat center;
+          background-size: contain;
+          width: 1em;
+          display: inline-block;
+          height: 40px;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      }
     }
   }
   
   nav {
-    float: right;
     ul {
       margin: 0;
+      display: flex;
+      flex-direction: row;
     }
     
     li {
-      display: inline-block;
-      margin: 0.5em 0.4em;
-      
-      @include larger-than($on-palm) {
-        margin: 0.5em 1em;
-      }
+      list-style: none;
+      flex: 1;
+      max-width: 6em;
     }
     
-    a, a:visited, a:hover {
-      color: $white-color;
+    a {
+      text-align: center;
+      display: inline-block;
+      padding: 0.5em;
+      
+      &, &:visited, &:hover {
+        color: $white-color;
+      }
     }
     
     a:hover {
       text-shadow: -0.06ex 0 $white-color, 0.06ex 0 $white-color;
       text-decoration: none;
     }
+
+    @include smaller-than($on-palm) {
+      font-size: 60%;
+
+      a::before {
+        display: block;
+        margin-bottom: -5px;
+        filter: invert(100%);
+        opacity: 0.3;
+      }
+
+      a[href="#contact"]::before {
+        content: url("images/map.svg")
+      }
+      a[href="#about"]::before {
+        content: url("images/group.svg")
+      }
+      a[href="#donate"]::before {
+        content: url("images/bank.svg")
+      }
+      a[href="#service"]::before {
+        content: url("images/book.svg")
+      }
+      a[href="#events"]::before {
+        content: url("images/event.svg")
+      }
+    }
   }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -128,16 +175,31 @@ main header {
 
 h2 {
   text-align: center;
+  padding: 2em 0 1em;
+  font-size: 200%;
 }
 
 article {
-  padding: 1em calc((100% - 50em)/2);
+  margin: 0em auto;
+  padding: 3em 1em 8em;
+  max-width: 50em;
   text-align: center;
+  box-sizing: content-box;
 
   &:nth-of-type(even) {
-    background: #dddde3;
-    box-shadow: 0 0 15px -10px black;
     position: relative;
+    
+    &::before {
+      content: ' ';
+      position: absolute;
+      left: -1000px;
+      right: -1000px;
+      top: 0;
+      bottom: 0;
+      z-index: -10;
+      background: #dddde3;
+      box-shadow: 0 0 15px -10px black;
+    }
   }
 }
 
