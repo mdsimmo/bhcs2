@@ -24,11 +24,11 @@ layout: default
 
 <main>
     
-    <header class=".page-header {{ page.banner_img | default: "classroom" }}">
+    <header id="service" class=".page-header {{ page.banner_img | default: "classroom" }}">
         <h1><span class="line-1">Belgrave Heights</span><span class="line-2">Presbyterian Church</span></h1>
     </header>
     
-    <article id="service">
+    <article>
         <h2>Church Service</h2>
         <p class="time">Sunday 10:00 am</p>
         <p>All Welcome. Sunday School starts at 10:30</p>
@@ -123,7 +123,7 @@ layout: default
     </article>
 
     <article id="contact">
-        <h2>Contact</h2>
+        <h2>Visting Us</h2>
 
         <p>Church service is held in the undercroft of the School; enter the main gates into the carpark, and follow the signs</p>
 
@@ -137,6 +137,8 @@ layout: default
         &q=Belgrave+Heights+Presbyterian+Church,Australia+Victoria">
         </iframe>
 
+        <h2>Contact Us</h2>
+        
         <div class="multi-box">
             <section>
                 <address>
@@ -154,15 +156,17 @@ layout: default
                 <p><a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
                 <p><a class="phone" href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
             </section>
-            <section class="technical">
-                <p>Hosted on <a href="www.genesis.net.au"/>Genesis Networks</a></p>
-                <p><a href="https://github.com/{{ site.github_repo | escape }}">
-                    <svg class="svg-icon">
-                        <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
-                    </svg>
-                    <span>Fork me on GitHub</span>
-                </a></p>
-            </section>
         </div>
     </article>
 </main>
+
+<footer>
+    <p>Hosted on <a href="www.genesis.net.au"/>Genesis Networks</a></p>
+    <p><a href="https://github.com/{{ site.github_repo | escape }}">
+        <svg class="svg-icon">
+            <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
+        </svg>
+        <span>Fork me on GitHub</span>
+    </a></p>
+    </section>
+</footer>

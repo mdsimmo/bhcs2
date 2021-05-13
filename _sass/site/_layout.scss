@@ -163,14 +163,36 @@ main header {
   }
   
   @include larger-than($on-laptop) {
-    height: 20em;
+    height: 30em;
     padding-top: 7em;
+    margin-bottom: -15em; // For overlapping first paragraph
     
     h1 {
       font-size: 4em;
     }
   }
   
+}
+
+// Make the first paragraph overlap the banner
+@include larger-than($on-laptop) {
+  article:first-of-type {
+    padding: 2em 3em 2em;
+    margin: 5em auto 3em;
+    box-shadow: 0 2px 15px -10px black;
+    
+    h2 {
+      display: none;
+    }
+    
+    p:first-of-type {
+      font-size: 150%;
+    }
+    
+    &::before {
+      display: none;
+    }
+  }
 }
 
 h2 {
@@ -186,8 +208,9 @@ article {
   text-align: center;
   box-sizing: content-box;
 
-  &:nth-of-type(even) {
+  &:nth-of-type(odd) {
     position: relative;
+    background: #dddde3;
     
     &::before {
       content: ' ';
@@ -252,28 +275,14 @@ article {
 
 
 
-footer {
-  background: #333;
-  padding: 1em 2em;
-  color: $white-color;
-  box-shadow: 0 0 15px -5px black;
-  position: relative;
-  padding: 1em calc((100% - 50em)/2);
-
-  p {
-    margin-bottom: 0;
-  }
-  
-  .contacts {
-    text-align: left;
-  }
+#contact {
   
   .phone::before {
     content: url("images/phone.svg");
     padding-right: 1em;
     opacity: 0.5;
   }
-
+  
   .email::before {
     content: url("images/email.svg");
     padding-right: 1em;
@@ -292,10 +301,24 @@ footer {
   }
 }
 
+footer {
+  background: #333;
+  padding: 0.3em;
+  border-top: 1px solid #444;
+  text-align: center;
+  
+  p {
+    display: inline;
+    margin: 0 2em 0;
+  }
+}
+
 .button {
   border: 1px solid #aaa;
   border-radius: 100em;
-  padding: 0.2em 0.7em 0.3em;
+  padding: 0.3em 1.0em 0.4em;
+  margin: 1em;
+  display: inline-block;
   
   &:hover {
     background: rgba(0, 0, 0, 0.1);
