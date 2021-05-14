@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap');
-    /**
-     * Reset some basic elements
-     */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/**
+ * Reset some basic elements
+ */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -97,9 +98,6 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
-}
-h2 {
-  font-family: 'Kaushan Script', cursive;
 }
 h3 {
   font-weight: bolder;
