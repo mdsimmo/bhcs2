@@ -129,11 +129,11 @@ main header {
   color: $dull-white-color;
 
   &.garden {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/garden_2.jpg") center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/garden_2.jpg") center / cover;
   }
 
   &.classroom {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/BHCS4_2.jpg") center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/BHCS4_2.jpg") center / cover;
   }
 
   h1 {
@@ -187,17 +187,21 @@ h2 {
     margin: 5em auto 3em;
     box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.5);
     
-    h2 {
-      display: none;
-    }
-    
-    p:first-of-type {
-      font-size: 150%;
-    }
-    
     &::before {
       display: none;
     }
+  }
+}
+
+article:first-of-type {
+  // Service time larger font-size
+  p:first-of-type {
+    font-size: 150%;
+  }
+  
+  // Service header - maybe I should just delete it?
+  h2 {
+    display: none;
   }
 }
 
