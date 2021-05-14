@@ -60,6 +60,7 @@
     }
     
     li {
+      display: inline-block;
       list-style: none;
       flex: 1;
       max-width: 6em;
@@ -120,6 +121,7 @@ body {
 
 // The picture header
 main header {
+  background: #ddd; // old browser fallback
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
   background-size: cover;
   height: 8em;
@@ -129,10 +131,12 @@ main header {
   color: $dull-white-color;
 
   &.garden {
+    background: url("images/garden_2.jpg") center / cover; // ie8 fallback
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/garden_2.jpg") center / cover;
   }
 
   &.classroom {
+    background: url("images/BHCS4_2.jpg") center / cover; // ie8 fallback
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/BHCS4_2.jpg") center / cover;
   }
 
