@@ -8,13 +8,14 @@
 
   <link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | relative_url}}" type="image/x-icon">
 
-   <!--[if lt IE 9]>
-     <script type="text/javascript" src="{{ "/assets/js/html5shiv.js" | relative_url}}"></script>
-   <![endif]-->
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="{{ "/assets/js/html5shiv.js" | relative_url}}"></script>
+  <![endif]-->
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="{{ "/assets/js/nwmatcher.js" | relative_url}}"></script>
+    <script type="text/javascript" src="{{ "/assets/js/selectivizr.js" | relative_url}}"></script>
+  <![endif]--> 
 
-   <!--[if (gte IE 6)&(lte IE 8)]>
-     <script type="text/javascript" src="{{ "/assets/js/nwmatcher.js" | relative_url}}"></script>
-     <script type="text/javascript" src="{{ "/assets/js/selectivizr.js" | relative_url}}"></script>
-   <![endif]--> 
+  <script type="text/javascript" src="{{ "/assets/js/site.js" | relative_url}}"></script>
 
 </head>
