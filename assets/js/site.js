@@ -4,9 +4,9 @@ document.onscroll = function(e) {
   var last = null;
   
   for (var i = 0; i < links.length; i++) {
-    let link = links[i];
-    let id = link.href.split('#').pop();
-    let element = document.getElementById(id);
+    var link = links[i];
+    var id = link.href.split('#').pop();
+    var element = document.getElementById(id);
     if (!element) {
       continue;
     }
