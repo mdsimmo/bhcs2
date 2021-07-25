@@ -60,7 +60,8 @@
     }
     
     li {
-      display: inline-block;
+      display: flex;
+      align-items: center;
       list-style: none;
       flex: 1;
       max-width: 6em;
